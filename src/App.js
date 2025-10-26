@@ -29,7 +29,7 @@ function App() {
             transition: { duration: 0.4, ease: "easeInOut" },
           }}
         >
-          <Router basename="/shubangi_resume">
+    
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/research" element={<Research />} />
@@ -39,7 +39,7 @@ function App() {
               <Route path="/reference" element={<Reference />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
-          </Router>
+          
         </motion.div>
       </div>
     </Router>
