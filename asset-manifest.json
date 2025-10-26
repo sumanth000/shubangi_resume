@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/shubangi_resume/static/css/main.663378c9.css",
+    "main.js": "/shubangi_resume/static/js/main.3e9fa424.js",
+    "static/js/453.adfd0f75.chunk.js": "/shubangi_resume/static/js/453.adfd0f75.chunk.js",
+    "static/media/Shubangi_image.jpg": "/shubangi_resume/static/media/Shubangi_image.7e90c3b043cfd0960643.jpg",
+    "index.html": "/shubangi_resume/index.html",
+    "main.663378c9.css.map": "/shubangi_resume/static/css/main.663378c9.css.map",
+    "main.3e9fa424.js.map": "/shubangi_resume/static/js/main.3e9fa424.js.map",
+    "453.adfd0f75.chunk.js.map": "/shubangi_resume/static/js/453.adfd0f75.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.663378c9.css",
+    "static/js/main.3e9fa424.js"
+  ]
+}
