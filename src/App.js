@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
@@ -27,17 +29,17 @@ function App() {
             transition: { duration: 0.4, ease: "easeInOut" },
           }}
         >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/teaching" element={<Teaching />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/interests" element={<Interests />} />
-            <Route path="/reference" element={<Reference />} />
-
-            <Route path="/contact" element={<Contact />} />
-
-          </Routes>
+          <Router basename="/shubangi_resume">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="/teaching" element={<Teaching />} />
+              <Route path="/cv" element={<CV />} />
+              <Route path="/interests" element={<Interests />} />
+              <Route path="/reference" element={<Reference />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Router>
         </motion.div>
       </div>
     </Router>
