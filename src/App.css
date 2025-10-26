@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout container */
+.app-container {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 240px;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+/* Hidden sidebar (for toggling) */
+.sidebar.hidden {
+  transform: translateX(-240px);
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 1.4rem;
+  margin-bottom: 7rem;
+  text-align: center;
+  margin-left: 1rem;
+}
+/* Sidebar menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 12px 0;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.sidebar li.active a,
+.sidebar li a:hover {
+  color: #fff;
+}
+
+/* Main page content */
+.page-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Page title */
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar dragger / toggle button */
+.sidebar-toggle {
+  position: absolute;
+  top: 35px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar-toggle:hover {
+  background-color: #333;
+}
+.imageSection {
+  flex: 1;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
+.homeSection {
+  display: flex
+;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.textSection {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .page-content {
+    padding: 60px 20px;
   }
 }
+
